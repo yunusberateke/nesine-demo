@@ -1,0 +1,61 @@
+.v-table {
+    border-collapse: collapse;
+    
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    width: 100%;
+
+    &-item {
+        border-collapse: collapse;
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    &-column {
+        border: 1px solid #dddddd;
+        text-align: center;
+        font-weight: normal;
+
+        &.v-f-column {
+            width: 300px;
+            padding: 0 12px;
+        }
+
+        &.clickable {
+            user-select: none;
+            cursor: pointer;
+
+            &.active {
+                background-color: yellow;
+            }
+        }
+    }
+
+    &-body {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        border-collapse: collapse;
+
+        .v-table-item {
+            position: absolute;
+
+            .v-f-column {
+                text-align: start;
+            }
+        }
+    }
+
+    &-header {
+        position: sticky;
+        top: 0;
+        background-color: #D3CACA;
+        z-index: 1;
+    }
+}
+
+.v-table-wrapper {
+    overflow: auto;
+}
